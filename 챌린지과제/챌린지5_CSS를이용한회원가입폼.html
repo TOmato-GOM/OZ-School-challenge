@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 사이트</title>
+    <link rel="stylesheet" href="../챌린지과제/css/join.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="join_form">
+        <h1 class="join_text">
+          회원 가입을 위해 <br />
+          정보를 입력해주세요
+        </h1>
+        <section class="identity flex">
+          <label for="email" id="email">* 이메일</label>
+          <input type="email" id="email_box" />
+          <label for="name" id="name">* 이름</label>
+          <input type="text" id="name_box" />
+          <label for="password" id="password">* 비밀번호</label>
+          <input type="password" id="password_box" />
+          <label for="password" id="password">* 비밀번호 확인</label>
+          <input type="password" id="password_checking_box" />
+        </section>
+        <section class="gender">
+          <div class="gender_box">
+            <input type="radio" id="male" name="gender" />
+            <label for="male">남성</label>
+          </div>
+          <div class="gender_box">
+            <input type="radio" id="femmale" name="gender" />
+            <label for="femmale">여성</label>
+          </div>
+        </section>
+        <section class="collect_text">
+          <input type="checkbox" id="collect_text" />
+          <label for="collect_text">
+            이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두
+            동의합니다.</label
+          >
+        </section>
+        <br />
+        <hr />
+        <input type="submit" name="submit" id="submit" value="가입하기" />
+      </main>
+    </div>
+  </body>
+</html>

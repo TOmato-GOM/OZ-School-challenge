@@ -1,0 +1,120 @@
+/* 전체 적인 사이징 */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+}
+/* 헤더 부분 css */
+header.header {
+  background-color: #8477fe;
+}
+.nav_container {
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  justify-content: space-around;
+  margin: auto;
+  width: 100%;
+  max-width: 75rem;
+}
+.nav_box {
+  align-items: center;
+  padding: 10px;
+  flex-grow: 1;
+}
+.header_logo {
+  color: #4e42b4;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-right: 24px;
+}
+.nav_box ul {
+  display: flex;
+  padding: 0;
+}
+.nav_box ul li {
+  list-style-type: none;
+  margin-right: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.btn_menu {
+  border: none;
+  background-color: transparent;
+  font-size: 1.75rem;
+}
+.nav_box .active {
+  color: #2c2093;
+}
+.donate_link {
+  text-decoration: none;
+  color: lightpink;
+}
+
+/* 메인 css - aside */
+.main_container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  background-color: #8477fe;
+}
+/* 프로필 구역 */
+.aside_profile {
+  flex-direction: column;
+  border-right: 1px solid black;
+  width: 30%;
+  text-align: center;
+}
+.profile_pic {
+  padding: 10px;
+}
+.profile_text {
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+.sns_box {
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  border-top: 1px black dotted;
+  flex-grow: 1;
+}
+.pic_discord {
+  margin-top: 5px;
+  align-self: center;
+  border-bottom: 1px solid black;
+  border-width: 100;
+}
+.pic_instagram {
+  margin: 5px 0px;
+  align-self: center;
+}
+section p {
+  float: right;
+  margin: 3px;
+  font-weight: 350;
+}
+/* 취미 구역 */
+.habit_box {
+  overflow: scroll;
+  width: 70%;
+  background: linear-gradient(45deg, white, #8477fe);
+}
+.habit_text_box {
+  padding: 10px;
+  height: 340px;
+}
+.habit_box p {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+.habit_text_box li {
+  margin: 10px 0px;
+}

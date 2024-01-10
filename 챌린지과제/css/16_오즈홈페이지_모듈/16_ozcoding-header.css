@@ -1,0 +1,118 @@
+/* 배경이미지 헤더 요소 */
+.header {
+  width: 100%;
+  height: 100%;
+}
+.header-box {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  background-image: url(/챌린지과제/image/독버섯농담곰.JPG);
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: end;
+}
+.header-text,
+.cheerup {
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+}
+.cheerup {
+  animation-name: blink;
+  animation-duration: 700ms;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+/* 네비게이션 바 요소 */
+.nav-bar {
+  top: 0;
+  position: sticky;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+.nav-container {
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-bar ul,
+.nav-bar span {
+  list-style-type: none;
+  padding: 5px 20px;
+}
+.nav-bar span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.media-nav {
+  display: none;
+}
+ul li {
+  font-size: 1.25rem;
+  padding-right: 50px;
+}
+a {
+  border-bottom: 0px solid purple;
+  color: white;
+  text-decoration: none;
+}
+#menu-bar {
+  display: none;
+}
+label {
+  display: none;
+}
+.nav-item a:hover {
+  border-bottom: 5px solid purple;
+  transition-property: border-bottom;
+  transition-duration: 500ms;
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 680px) {
+  div.nav-flex {
+    display: none;
+  }
+  .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  label {
+    display: flex;
+    font-size: 2rem;
+  }
+  ul.flex {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  ul.flex li {
+    padding: 0px;
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+    line-height: 2rem;
+  }
+  #menu-bar:checked ~ .nav-flex {
+    display: block;
+    width: 100%;
+  }
+}

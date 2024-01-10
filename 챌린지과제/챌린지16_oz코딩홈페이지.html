@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OZ코딩</title>
+    <link
+      rel="stylesheet"
+      href="/챌린지과제/css/16_오즈홈페이지_모듈/16_ozcoding-header.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/챌린지과제/css/16_오즈홈페이지_모듈/16_ozcoding-main.css"
+    />
+    <style>
+      /* 전체적인 사이징 */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        height: 100%;
+        font-size: 16px;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+      }
+      .flex {
+        display: flex;
+      }
+      .ozcording {
+        flex-direction: column;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="top">
+      <main class="ozcording flex">
+        <header class="header-box flex">
+          <div class="cheerup">🥳</div>
+          <span class="header-text">&nbsp;코린이 오늘도 화이팅!!&nbsp;</span>
+          <div class="cheerup">🥳</div>
+        </header>
+        <nav class="nav-bar flex">
+          <div class="nav-container flex">
+            <span class="title"><a href="#top">OZ</a></span>
+            <input type="checkbox" id="menu-bar" />
+            <label for="menu-bar" class="">&#9776;</label>
+            <div class="nav-flex">
+              <ul class="flex">
+                <li class="nav-item"><a href="#">코딩스쿨</a></li>
+                <li class="nav-item"><a href="#HTML">HTML</a></li>
+                <li class="nav-item"><a href="#CSS">CSS</a></li>
+                <li class="nav-item"><a href="#curriculum">커리큘럼</a></li>
+                <li class="nav-item"><a href="#fag">문의사항</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <section class="main-container flex">
+          <div class="about"><span>about</span></div>
+          <div class="ozcodingschool"><span>OZ코딩스쿨</span></div>
+          <article class="coding-hyper flex">
+            <a href="https://ozcodingschool.com/" target="_blank">
+              <div class="about-card flex">
+                <span class="about-emoji">⚡️</span>
+                <span class="quick-header">빠른 강의</span>
+                <span class="about-text"
+                  >군더더기 없는 진행으로<br />여러번의 시간을 절약합니다.</span
+                >
+              </div>
+            </a>
+            <a
+              href="https://ozcodingschool.com/mypage/classList"
+              target="_blank"
+            >
+              <div class="about-card flex">
+                <span class="about-emoji">📖</span>
+                <span class="learn-header">손쉬운 학습</span>
+                <span class="about-text"
+                  >강의 페이지를 활용해서<br />편리하게 실습할 수
+                  있습니다.</span
+                >
+              </div>
+            </a>
+            <a
+              href="https://ozcodingschool.com/ozcoding/oznightschool"
+              target="_blank"
+            >
+              <div class="about-card flex">
+                <span class="about-emoji">👾</span>
+                <span class="play-header">플레이그라운드</span>
+                <span class="about-text"
+                  >강의를 위해 제작한 도구가<br />반복합습을 도와줍니다.
+                </span>
+              </div>
+            </a>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

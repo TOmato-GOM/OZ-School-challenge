@@ -38,7 +38,7 @@ body {
   height: 50px;
   background-size: cover;
   border-radius: 35%;
-  background-image: url(/챌린지과제/image/냥모나이트.jpeg);
+  background-image: url(../image/냥모나이트.jpeg);
   margin: 7px;
 }
 .user-name,
@@ -73,7 +73,7 @@ body {
   width: 100%;
   height: 100%;
   content: '';
-  background-image: url(/챌린지과제/image/농담곰.jpeg);
+  background-image: url(/챌린지과제/HTML_CSS/image/농담곰.jpeg);
   background-repeat: no-repeat;
   background-size: 500px;
   background-position: center;
@@ -108,40 +108,4 @@ textarea {
   padding: 10px;
   font-size: 20px;
   background-color: rgb(172, 219, 250);
-}
-.ul-wrap {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  list-style: none;
-  margin: 0;
-}
-.chat-text {
-  display: flex;
-  padding: 10px;
-  width: 100%;
-}
-.text-user_pic {
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  border-radius: 35%;
-  background-image: url(/챌린지과제/image/냥모나이트.jpeg);
-}
-.chat-text-msg {
-  background-color: rgb(172, 219, 250);
-  border-radius: 5px;
-  margin-left: 5px;
-  max-width: 70%;
-}
-.chat-text-msg p {
-  font-size: 13px;
-  margin: 0;
-  padding: 5px;
-  line-height: 32px;
-  max-height: 100%;
-  max-width: 170px;
-}
-.chat-text:nth-child(even) {
-  justify-content: end;
 }

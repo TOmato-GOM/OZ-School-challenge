@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다크모드</title>
+  </head>
+  <body>
+    <input
+      type="button"
+      value="night"
+      onclick="
+      let target = document.querySelector('body')
+  if(this.value ==='night'){
+    target.style.backgroundColor='black'
+    target.style.color='white'
+    this.value = 'day'
+  }else{
+    target.style.backgroundColor='white'
+    target.style.color='black'
+    this.value = 'night'
+
+    var alist = document.querySelectorAll('a');
+      var i = 0;
+      while (i < alist.length) {
+        alist[i].style.color = 'blue';
+        i = 1 + i;}
+  }"
+    />
+  </body>
+</html>

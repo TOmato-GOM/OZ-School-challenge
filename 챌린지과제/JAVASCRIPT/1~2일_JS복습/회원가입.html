@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        display: grid;
+        gap: 12px;
+      }
+      .container > input {
+        height: 30px;
+      }
+      .gender-box {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>OZ초격차 회원가입</h1>
+    <div class="container">
+      <input type="text" id="email" placeholder="이메일을 입력해주세요" />
+      <input type="text" id="name" placeholder="이름을 입력해주세요" />
+      <input
+        type="password"
+        id="password"
+        placeholder="비밀번호를 입력해주세요"
+      />
+      <input
+        type="password"
+        id="password-confirm"
+        placeholder="비밀번호를 한번 더 입력해주세요"
+      />
+      <select name="region" id="region">
+        <option value="seoul">서울</option>
+        <option value="gyeonggi">경기</option>
+        <option value="kwangwon">강원</option>
+        <option value="chungcheong">충청</option>
+        <option value="jeonla">전라</option>
+        <option value="gyeonsang">경상</option>
+        <option value="jeju">제주</option>
+      </select>
+      <div class="gender-box">
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">남성</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">여성</label>
+      </div>
+      <button onclick="printData()">제출하기</button>
+    </div>
+
+    <script>
+      function printData() {
+        const emailInputDOM = document.getElementById('email');
+        const nameInputDOM = document.getElementById('name');
+        const passwordInputDOM = document.getElementById('password');
+        const passwordConfirmInputDOM =
+          document.getElementById('password-confirm');
+        const regionInputDOM = document.querySelector(
+          '#region > option:checked'
+        );
+        const genderInputDOM = document.querySelector(
+          'input[name="gender"]:checked'
+        );
+
+        const email = emailInputDOM.value;
+        const name = nameInputDOM.value;
+        const password = passwordInputDOM.value;
+        const passwordConfirm = passwordConfirmInputDOM.value;
+        const region = regionInputDOM.value;
+        const gender = genderInputDOM.value;
+
+        const data = {
+          email,
+          name,
+          password,
+          passwordConfirm,
+          region,
+          gender,
+        };
+
+        console.log('data', data);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>성적표</title>
+  </head>
+  <body>
+    <!-- 조건문 - 성적표 -->
+    <h1>성적표</h1>
+    <p></p>
+
+    <script>
+      const p = document.querySelector('p');
+      let grade = parseInt(prompt('중간고사 점수를 입력하세요.'));
+      if (grade >= 90) {
+        p.textContent = `나의 기말고사 점수는 ${grade}점, 학점은 A!!!`;
+      } else if (grade >= 80) {
+        p.textContent = `나의 기말고사 점수는 ${grade}점, 학점은 B!!!`;
+      } else if (grade >= 70) {
+        p.textContent = `나의 기말고사 점수는 ${grade}점, 학점은 C!!!`;
+      } else if (grade >= 60) {
+        p.textContent = `나의 기말고사 점수는 ${grade}점, 학점은 D!!!`;
+      } else {
+        p.textContent = `나의 기말고사 점수는 ${grade}점, 학점은 F!!!`;
+      }
+    </script>
+  </body>
+</html>

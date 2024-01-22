@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>스탑워치</h2>
+    <p id="time">
+      <span id="minutes">00</span>:<span id="seconds">00</span>:<span id="tens"
+        >00</span
+      >
+    </p>
+    <button id="start_btn">START</button>
+    <button id="stop_btn">STOP</button>
+    <button id="reset_btn">RESET</button>
+
+    <script>
+      let minute = '00';
+      let second = '00';
+      let ten = '00';
+
+      const minutes = document.getElementById('minutes');
+      const seconds = document.getElementById('seconds');
+      const tens = document.getElementById('tens');
+      const startBtn = document.getElementById('start_btn');
+      const stopBtn = document.getElementById('stop_btn');
+      const resetBtn = document.getElementById('reset_btn');
+
+      let timeID;
+      startBtn.onclick = function () {
+        clearInterval(timeID);
+        timeID = setInterval(operateTimer, 10);
+      };
+
+      stopBtn.onclick = function () {
+        clearInterval(timeID);
+      };
+
+      resetBtn.onclick = function () {
+        clearInterval(timeID);
+        minute = 0;
+        second = 0;
+        ten = 0;
+        minutes.textContent = '00';
+        seconds.textContent = '00';
+        tens.textContent = '00';
+      };
+      function operateTimer() {
+        ten++;
+        tens.textContent = ten;
+        if (ten > 99) {
+          second++;
+          seconds.textContent = second > 9 ? second : '0' + second;
+          ten = 0;
+          tens.textContent = '00';
+        }
+        if (second > 59) {
+          minute++;
+          minutes.textContent = minute > 9 ? minute : '0' + minute;
+          second = 0;
+          seconds.textContent = '00';
+        }
+      }
+    </script>
+  </body>
+</html>

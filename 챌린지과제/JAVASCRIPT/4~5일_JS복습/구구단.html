@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구구단</title>
+    <style>
+      table, td{
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>구구단</h1>
+    <table class="times_table">
+
+    </table>
+  </body>
+  <script>
+    function createRow(i) {
+      const line = document.createElement('tr');
+      for (j = 2; j < 10; j++) {
+        const detail = document.createElement('td');
+        detail.textContent = i === 0 ? `${j}단` : `${j} X ${i} = ${j * i}`;
+        line.append(detail);
+      }
+
+      document.querySelector('.times_table').appendChild(line);
+    }
+
+    function createTimesTable() {
+      for (i = 0; i <= 9; i++) {
+        createRow(i);
+      }
+    }
+
+    
+    createTimesTable();
+  </script>
+  </script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머</title>
+  </head>
+  <body>
+    <p id="now"></p>
+    <p id="endday"></p>
+    <script>
+      setInterval(function () {
+        const now = new Date();
+        const time = now.toLocaleString('now');
+
+        const p = document.getElementById('now');
+
+        p.textContent = `현재시간: ${time}`;
+      }, 100);
+
+      setInterval(() => {
+        function getTime() {
+          const Dday = new Date('2024-12-31 23:59:59');
+          const today = new Date();
+          const diff = Dday.getTime() - today.getTime();
+          // Ms 단위로 변환
+          (secInMs = Math.floor(diff / 1000)),
+            (minInMs = Math.floor(secInMs / 60)),
+            (hourInMs = Math.floor(minInMs / 60)),
+            (days = Math.floor(hourInMs / 24)),
+            // 남은 시간 계산
+            (seconds = secInMs % 60),
+            (minutes = minInMs % 60),
+            (hours = hourInMs % 24);
+          const p = document.getElementById('endday');
+
+          p.textContent = `남은시간 : ${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+        }
+
+        function init() {
+          setInterval(getTime, 100); // getTime이라는 함수를 1000ms(1초) 단위로 실행한다.
+        }
+
+        init();
+      }, 100);
+    </script>
+  </body>
+</html>

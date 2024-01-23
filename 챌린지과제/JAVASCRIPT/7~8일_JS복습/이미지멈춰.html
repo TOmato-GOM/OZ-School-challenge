@@ -6,11 +6,25 @@
     <title>이미지 멈춰!</title>
   </head>
   <body>
-    <div>
-      <img src="/HTMLCSS-STUDY/챌린지과제/image/극혐나비.png" alt="" />
-      <img src="/HTMLCSS-STUDY/챌린지과제/image/냥모나이트.jpeg" alt="" />
-      <img src="/HTMLCSS-STUDY/챌린지과제/image/김춘배카레.jpeg" alt="" />
-      <span></span>
+    <div style="width: 500px">
+      <img src="image/img1.png" alt="" id="imgbox" />
     </div>
+    <button id="stop_btn">멈춰!</button>
+    <script>
+      let count = 1;
+      let imgChange = document.getElementById('imgbox');
+      const stopBtn = document.getElementById('stop_btn');
+      const interval = setInterval(function () {
+        count++;
+        imgChange.src = `image/img${count}.png`;
+        imgChange.style.width = '50%';
+        if (count >= 8) {
+          count = 0;
+        }
+      }, 1000);
+      stopBtn.addEventListener('click', function () {
+        clearInterval(interval);
+      });
+    </script>
   </body>
 </html>

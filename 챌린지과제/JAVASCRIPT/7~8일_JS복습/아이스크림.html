@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이스크림 주세요</title>
+  </head>
+  <body>
+    <button id="icecream_push">아이스크림 추가하기</button
+    ><button id="icecream_out">아이스크림 출력하기</button>
+    <h1>입력한 아이스크림 목록: <span id="icecream_list"></span></h1>
+
+    <script>
+      const iceCream = [];
+      const iceCreamPushBtn = document.getElementById('icecream_push');
+      const iceCreamOutBtn = document.getElementById('icecream_out');
+      const iceCreamList = document.getElementById('icecream_list');
+
+      iceCreamPushBtn.addEventListener('click', function () {
+        const iceCreamAdd = prompt('추가하고 싶은 아이스크림을 적어주세요!');
+        iceCream.push(iceCreamAdd);
+        console.log(iceCream);
+      });
+
+      iceCreamOutBtn.addEventListener('click', function () {
+        iceCreamList.textContent = `${iceCream}`;
+      });
+    </script>
+  </body>
+</html>

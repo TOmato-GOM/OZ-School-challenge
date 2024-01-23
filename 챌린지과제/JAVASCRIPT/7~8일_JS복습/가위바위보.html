@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가위 바위 보</title>
+  </head>
+  <body>
+    <h1>가위바위보 게임</h1>
+    <p>'가위, 바위, 보' 중 하나를 입력하세요.</p>
+    <input type="text" id="rps" /><input
+      type="submit"
+      value="결과 확인"
+      id="result_btn"
+    />
+    <p>
+      당신의 선택: <span id="user_choice"></span> / 컴퓨터의 선택:
+      <span id="com_choice"></span> / 결과: <span id="result"></span>
+    </p>
+
+    <script>
+      const rpsValue = document.getElementById('rps');
+      const resultBtn = document.getElementById('result_btn');
+
+      const arr = ['가위', '바위', '보'];
+      const userChoice = document.getElementById('user_choice');
+      const comChoice = document.getElementById('com_choice');
+      const result = document.getElementById('result');
+
+      resultBtn.addEventListener('click', function () {
+        const randomArr = parseInt(Math.random() * arr.length);
+        const userValue = rpsValue.value;
+
+        let userValueNumber = -1;
+        if (userValue === '가위') {
+          userValueNumber = 0;
+        } else if (userValue === '바위') {
+          userValueNumber = 1;
+        } else if (userValue === '보') {
+          userValueNumber = 2;
+        } else {
+          alert("'가위, 바위, 보' 중에 입력해주세요.");
+          return;
+        }
+
+        userChoice.textContent = userValue;
+        comChoice.textContent = arr[randomArr];
+
+        if (userValueNumber === randomArr) {
+          result.textContent = '비겼습니다.';
+        } else if (
+          (userValueNumber == 0 && randomArr == 2) ||
+          (userValueNumber == 1 && randomArr == 0) ||
+          (userValueNumber == 2 && randomArr == 1)
+        ) {
+          result.textContent = '이겼습니다.';
+        } else {
+          result.textContent = '졌습니다.';
+        }
+      });
+    </script>
+  </body>
+</html>
